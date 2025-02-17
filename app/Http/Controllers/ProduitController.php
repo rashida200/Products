@@ -14,7 +14,6 @@ class ProduitController extends Controller
             return $query->where('nom', 'like', "%{$search}%")
                          ->orWhere('description', 'like', "%{$search}%");
         })->paginate(10);
-        // dd($produits);
         return view('dashboard', compact('produits'));
     }
 

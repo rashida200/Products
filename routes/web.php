@@ -8,7 +8,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', [ProduitController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::redirect('/dashboard','/produits')->middleware(['auth', 'verified'])->name('dashboard');
 
 
 Route::middleware('auth')->group(function () {
@@ -17,6 +17,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('produits', ProduitController::class);
+Route::resource('produits', ProduitController::class)->middleware('admin');
+
+Route::get('/commercial-dashboard', function () {
+    return view('commercial.dashboard');
+})->name('commercial.dashboard');
 
 require __DIR__.'/auth.php';

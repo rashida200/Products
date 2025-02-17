@@ -44,7 +44,7 @@
             <x-input-label for="role" :value="('Role')" />
             <select name="role" id="role" class="block mt-1 w-full rounded-lg border-gray-600 bg-gray-800 text-white focus:ring focus:ring-blue-500" required>
                 <option value="admin" {{ old('role') == 'admin' ? 'selected' : '' }}>Admin</option>
-                <option value="commercial" {{ old('role') == 'commercial' ? 'selected' : '' }}>Commercial</option>
+                <option value="commerciale" {{ old('role') == 'commerciale' ? 'selected' : '' }}>Commerciale</option>
             </select>
             <x-input-error :messages="$errors->get('role')" class="mt-2" />
         </div>
