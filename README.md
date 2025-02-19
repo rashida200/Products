@@ -10,10 +10,9 @@ This is a Laravel-based web application that provides [brief description of your
 
 ## Requirements
 Make sure your system meets the following requirements before proceeding with installation:
-- PHP >= 8.0
 - Composer
 - MySQL / PostgreSQL / SQLite (choose your database)
-- Laravel 10.x
+- Laravel 11.x
 - Node.js & npm (for frontend assets)
 
 ## Installation
@@ -21,7 +20,7 @@ Follow these steps to set up the project:
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/your-username/your-repository.git
+   git clone https://github.com/rashida200/Products.git
    cd your-repository
    ```
 
